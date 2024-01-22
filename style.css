@@ -9,28 +9,36 @@ body{
 }
 
 .container{
-    height:70vh;  
+    height: 80vh;
+    /* border: 1px solid black; */
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+   
 }
 
 .game{
-    height:60vmin;
-    width:60vmin;
-    
+    /* border:1px solid;  */
+
+    height: 60vmin;
+    width: 60vmin;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap:2vmin;
 }
 .box{
-    height:18vmin;
-    width:18vmin; 
-    gap:50vmin;  
-
+    height: 18vmin;
+    width:18vmin;
     border-radius: 1rem;
-    border: none;
-    box-shadow: 0 0 1rem #4b071d;
-    font-size: 6vmin;
-    color: #56CBf9;
+    border:none;
+    box-shadow:0 0 1rem #5b180f ;
+    font-size: 14vmin;
+    color: #06BEE1;
+    text-shadow: 0 0 1rem #03256C;
+    background-color: #F4F1BB;
+    ;
 }
 
 #reset_button{
@@ -41,4 +49,45 @@ body{
     font-size: larger;
     border: 2px solid rgb(243, 192, 192);
     border-radius:15px;
+}
+.heading{
+
+    font-size: 72px;
+  background: -webkit-linear-gradient(#e847d8, #03256C);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    font-weight: bolder;
+    font-style:normal;
+}
+
+.message-container{
+    height:100vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:10rem;
+}
+
+#new-game-button{
+    background-color: #03256C;
+    color:rgb(254, 246, 246);
+    height: 50px;
+    width: 120px;
+    font-size: larger;
+    border: 2px solid rgb(243, 192, 192);
+    border-radius:15px;
+}
+
+.hide{
+    display: none;
+}
+
+#message{
+    font-size: 50px;
+  background: -webkit-linear-gradient(#330a2f, #89a6e4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    font-weight: bolder;
+    font-style:normal;
 }
