@@ -1,3 +1,3 @@
 # first game
 
-# this is gonna be good
+# it was good
