@@ -20,8 +20,11 @@ const winPatterns=[
 ]; 
 
 boxes.forEach((box)=>{
+
+    
     box.addEventListener("click",()=>{
-            console.log("BOX was CLICKED");
+        console.log("BOX was CLICKED");
+        
             if(turnO){
                 box.innerText="O";
                 box.style.color="blue";
@@ -30,18 +33,22 @@ boxes.forEach((box)=>{
             }else {
                 box.innerText="X";
                 box.style.color="pink"; 
-                turnO=true;
-                
+                turnO=true; 
             }
-            box.disabled=true;
+        
+            box.disabled=true; // disable box
             count++;
-            let isWinner=checkWinner();
+        
+            let isWinner=checkWinner();//fucntion call
+
+        
             if(count===9&&!isWinner){
                 gameDraw();
             }
     });
 });
 
+//Function when draw
 const gameDraw = () => {
     message.innerText = `Game was a Draw.`;
     messageContainer.classList.remove("hide");
@@ -49,6 +56,7 @@ const gameDraw = () => {
   };
 
 
+//Functio to ena
 const enableBoxes=()=>{
     for (let box of boxes){
         box.disabled=false;
@@ -56,18 +64,22 @@ const enableBoxes=()=>{
     }
 }
 
-
+//Functio to disable box 
 const disableBoxes=()=>{
     for (let box of boxes){
         box.disabled=true;
     }
 }
 
+//Functio to show winner
+
 const showWinner = (winner)=>{
     message.innerText=`The winner is ${winner}`;
     messageContainer.classList.remove("hide");
     disableBoxes();
 }
+
+//Functio to check who won
 
 checkWinner =()=>{
     for (let pattern of winPatterns){
@@ -89,6 +101,9 @@ checkWinner =()=>{
 }
 
 };
+
+
+//Function to reset box
 
 const resetGame =()=>{
     trueO=true; 
