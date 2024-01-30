@@ -7,6 +7,7 @@ let messageContainer=document.querySelector(".message-container");
 let message=document.querySelector("#message");
 let turnO= true; 
 let count=0;
+let Count=0; //written twice wont work
 
 const winPatterns=[
 [0,1,2],
